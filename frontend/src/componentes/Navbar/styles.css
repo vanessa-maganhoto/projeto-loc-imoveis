@@ -1,0 +1,52 @@
+header {
+    height: 60px;
+    background-color: var(--color-primary);
+    display: flex;
+    align-items: center;
+}
+p{
+    color: #fff;
+}
+
+a{
+    text-decoration: none;
+}
+.loc-nav-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #e8e8e8;
+}
+
+.loc-nav-content h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.loc-contact-container {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.loc-contact-link {
+    margin: 0 0 0 10px;
+    font-size: 15px;
+}
+
+div.loc-btn-header{
+    background-color:#e8e8e8;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+a.rota-home{
+    text-decoration: none;
+    color: #e8e8e8;
+}
+
+a.rota-home:hover{
+    color: #e8e8e8; 
+}

@@ -1,0 +1,10 @@
+.loc-estrelas-container {
+    width: 130px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.loc-estrelas-container svg {
+    width: 22px;
+    height: auto;
+}

@@ -1,0 +1,42 @@
+INSERT INTO tb_user(email) VALUES ('maria@gmail.com');
+INSERT INTO tb_user(email) VALUES ('joao@gmail.com');
+INSERT INTO tb_user(email) VALUES ('ana@gmail.com');
+INSERT INTO tb_user(email) VALUES ('lucia@gmail.com');
+INSERT INTO tb_user(email) VALUES ('joaquim@gmail.com');
+
+INSERT INTO tb_imovel(score, count, title, image) VALUES (4.5, 2, 'Apartamento', 'https://www.incorposul.com.br/wp-content/uploads/2019/08/cropped-como-comprar-um-apartamento-1.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (3.3, 3, 'Apartamento', 'https://images.pexels.com/photos/279719/pexels-photo-279719.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Apartamento', 'https://www.tenda.com/Assets/img/capa-apartamentos-a-venda.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Sala Comercial', 'https://images.pexels.com/photos/565324/pexels-photo-565324.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Casa de Praia', 'https://blog.proprietariodireto.com.br/wp-content/uploads/2016/01/casa-de-praia-600x300.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Apartamento', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCMa-iRZItIMYVUPn3jCTDtKEKwK_ticcRuQ&usqp=CAU');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Casa', 'https://images.pexels.com/photos/358636/pexels-photo-358636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Casa de Condomínio', 'https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Casa de Praia', 'https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Rogue One: Uma História Star Wars', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/6t8ES1d12OzWyCGxBeDYLHoaDrT.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Star Wars: A Guerra dos Clones', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/uK15I3sGd8AudO9z6J6vi0HH1UU.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Star Wars: Episódio I - A Ameaça Fantasma', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/36LnijfQCOC89rCMOhn2OINXROI.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Vingadores: Ultimato', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/7RyHsO4yDXtBv1zUU3mTpHeQ0d5.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Thor', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/cDJ61O1STtbWNBwefuqVrRe3d7l.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Cisne Negro', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/hqh5O4KssfJWI62HGAgrjHXbxhD.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'O Silêncio dos Inocentes', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/mfwq2nMBzArzQ7Y9RKE8SKeeTkg.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Clube da Luta', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/hZkgoQYus5vegHoetLkCJzb17zJ.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Guerra Mundial Z', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/31VpBgUX5O4Z3dn5ZbX8HLqoXH3.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Harry Potter e as Relíquias da Morte - Parte 1', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/vcrgU0KaNj5mKUCIQSUdiQwTE9y.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Harry Potter e a Pedra Filosofal', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/lvOLivVeX3DVVcwfVkxKf0R22D8.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Alice no País das Maravilhas', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/qNdlZgz9yoSJ8f0YxQWfKGPoVV.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Animais Fantásticos e Onde Habitam', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/8Qsr8pvDL3s1jNZQ4HK1d1Xlvnh.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'A Teoria de Tudo', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/kq2MHrRfH6RTfkvyDEmYLmGHE6U.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'O Livro de Boba Fett', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/sjx6zjQI2dLGtEL0HGWsnq6UyLU.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'O Último Duelo', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/4LrL40XecjGLRpX5I2gzMTUt04l.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Interestelar', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/rAiYTfKGqDCRIIqo664sY9XZIvQ.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Contato', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/yFkUPqBuUnbhYbQL8VFpTrAT9za.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Duna', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jYEW5xZkZk2WTrdbMGAPFuBqbDc.jpg');
+INSERT INTO tb_imovel(score, count, title, image) VALUES (0, 0, 'Aquaman', 'https://www.themoviedb.org/t/p/w533_and_h300_bestv2/2cUsDz4TzFYHrKktT1bKHHQ7Cgm.jpg');
+
+INSERT INTO tb_score(imovel_id, user_id, value) VALUES (1, 1, 5.0);
+INSERT INTO tb_score(imovel_id, user_id, value) VALUES (1, 2, 4.0);
+INSERT INTO tb_score(imovel_id, user_id, value) VALUES (2, 1, 3.0);
+INSERT INTO tb_score(imovel_id, user_id, value) VALUES (2, 2, 3.0);
+INSERT INTO tb_score(imovel_id, user_id, value) VALUES (2, 3, 4.0);
+
