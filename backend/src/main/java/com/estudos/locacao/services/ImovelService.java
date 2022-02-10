@@ -61,11 +61,13 @@ public class ImovelService {
 		
 	}
 	
-	/*
-	Acima é a operação para criar um novo imovel. Pode usar o código das linhas 26 a 31 
-	para retornar o ID do imóvel criado? Se sim, como faz?
-	  */
+	/*@Transactional
+	public ImovelDTO atualizaImovel(ImovelDTO imovelDTO) {
+	Imovel imovel = imovelRepository.findById(dto.getImovelId()).get();
 	
+	EnderecoDTO dto = imovelDTO.getEndereco();
+		Endereco endereco = new Endereco();
+	*/
 	
 	
 }

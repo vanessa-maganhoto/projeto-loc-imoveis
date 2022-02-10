@@ -1,26 +1,10 @@
-import React, { useEffect } from 'react'
-import { ReactComponent as GithubIcon } from "../../recursos/img/github.svg"
+import React from 'react'
 import './styles.css'
-import FormCadastro from '../formCadastro'
 import { Link } from 'react-router-dom'
 
 
 
 export default function Navbar() {
-
-    useEffect(
-        () => {
-            const url = window.location.href
-            const res = url.split('?')
-        }
-    )
-
-
-    const retornarCadastro = () => {
-        return window.open(`http://localhost:3000/cadastro`, '_self')
-    }
-
-
 
     return (
         <header>

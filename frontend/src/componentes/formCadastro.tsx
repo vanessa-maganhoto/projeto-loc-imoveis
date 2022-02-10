@@ -10,6 +10,7 @@ import { BASE_URL } from '../utils/requests';
 export default function FormCadastro() {
 
 
+    
     const navigate = useNavigate()
 
     const [imovel, setImovel] = useState('')
@@ -103,22 +104,22 @@ export default function FormCadastro() {
                 <h3 style={{ fontSize: "30px" }}>Cadastro de Imóvel</h3>
                 <form className="loc-form" onSubmit={handleSubmit}>
                     <div className="form-group loc-form-group">
-                        <label htmlFor="titulo">Título</label>
-                        <input className="form-control" type="text" id="titulo" />
+                        <label htmlFor="titulo" >Título</label>
+                        <input className="form-control" type="text" id="titulo" required/>
                         <label htmlFor='cep'>CEP</label>
-                        <input type="text" id="cep" className="form-control" onBlur={checkCEP} />
+                        <input type="text" id="cep" className="form-control" onBlur={checkCEP} required/>
                         <label htmlFor='logradouro'>Logradouro</label>
-                        <input className="form-control" type="text" id='logradouro' />
+                        <input className="form-control" type="text" id='logradouro' required />
                         <label htmlFor='numero'>Número</label>
-                        <input className="form-control" type="text" id="numero" />
+                        <input className="form-control" type="text" id="numero" required/>
                         <label htmlFor="bairro">Bairro</label>
-                        <input className="form-control" type="text" id="bairro" />
+                        <input className="form-control" type="text" id="bairro" required/>
                         <label htmlFor='complemento'>Complemento</label>
                         <input className="form-control" type="text" id="complemento" />
                         <label htmlFor='cidade'>Cidade</label>
-                        <input className="form-control" type="text" id="cidade" />
+                        <input className="form-control" type="text" id="cidade" required/>
                         <label>Estado</label>
-                        <select className="form-control " id="estado" >
+                        <select className="form-control " id="estado" required>
                             <option value="" disabled selected>Selecione o estado</option>
                             <option value="AC">AC</option>
                             <option value="AL">AL</option>
@@ -149,16 +150,16 @@ export default function FormCadastro() {
                             <option value="TO">TO</option>
                         </select>
                         <label htmlFor='categoria'>Categoria</label>
-                        <select className="form-control "  id='categoria'>
+                        <select className="form-control "  id='categoria' required>
                             <option value="" disabled selected>Escolha a categoria</option>
                             <option value="comercial">Comercial</option>
                             <option value="residencial">Residencial</option>
                             <option value="temporada">Temporada</option>
                         </select>
                         <label htmlFor='descricao'>Descrição do Imóvel</label>
-                        <textarea className="form-control" id="descricao"></textarea>
+                        <textarea className="form-control" id="descricao" required></textarea>
                         <label htmlFor="imagem">Imagem</label>
-                        <input className="form-control" type="text" id="imagem" />
+                        <input className="form-control" type="text" id="imagem" required/>
                     </div>
                     <div className="loc-form-btn-container">
                         <button type="submit" className=" btn loc-btn">Salvar</button>

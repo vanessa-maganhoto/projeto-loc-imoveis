@@ -2,15 +2,15 @@ import * as React from 'react'
 import {
   BrowserRouter,
   Routes,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import Listing from './paginas/indexListing';
 import Form from './paginas/indexForm';
 import Navbar from "./componentes/Navbar/navbar";
 import FormCadastro from './componentes/formCadastro';
 import FormDetalhes from './componentes/formDetalhes';
-import { Imovel } from '../src/types/imovel' 
+import FormAtualizaCadastro from './componentes/formAtualizaCadastro'
+
 
 
 
@@ -28,6 +28,9 @@ export default function App() {
         </Route>
         <Route path="/detalhes" >
           <Route path=":imovelId" element={<FormDetalhes />}/>
+        </Route>
+        <Route path="/atualizar" >
+          <Route path=":imovelId" element={<FormAtualizaCadastro />}/>
         </Route>
       </Routes>
     </BrowserRouter>

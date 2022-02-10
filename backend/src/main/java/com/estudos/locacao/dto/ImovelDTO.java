@@ -1,17 +1,27 @@
 package com.estudos.locacao.dto;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
+
 import com.estudos.locacao.entidades.Imovel;
 
 // POJO 
 public class ImovelDTO {
 	
 	private Long id;
+	@NotBlank
 	private String title;
 	private Double score;
 	private Integer count;
+	@NotBlank
 	private String image;
+	@NotBlank
 	private String categoria;
+	@NotBlank
 	private String descricao;
+	@NotNull
+	@Valid
 	private EnderecoDTO endereco;
 	
 	public ImovelDTO() {

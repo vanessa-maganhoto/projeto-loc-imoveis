@@ -1,16 +1,24 @@
 package com.estudos.locacao.dto;
 
+import javax.validation.constraints.NotBlank;
+
 import com.estudos.locacao.entidades.Endereco;
 
 public class EnderecoDTO {
 	
 	private Long id;
+	@NotBlank
 	private String cep; 
+	@NotBlank
 	private String logradouro;
+	@NotBlank
 	private String numero;
+	@NotBlank
 	private String bairro;
 	private String complemento;
+	@NotBlank
 	private String cidade;
+	@NotBlank
 	private String estado;
 	
 	public EnderecoDTO() {}

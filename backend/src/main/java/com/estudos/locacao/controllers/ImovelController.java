@@ -1,5 +1,7 @@
 package com.estudos.locacao.controllers;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -17,29 +19,33 @@ import com.estudos.locacao.services.ImovelService;
 @RestController
 @RequestMapping(value = "/imovel")
 public class ImovelController {
-	
+
 	@Autowired
 	private ImovelService service;
-	
+
 	@GetMapping
-	public Page<ImovelDTO> findAll(Pageable pageable){	
+	public Page<ImovelDTO> findAll(Pageable pageable) {
 		return service.findAll(pageable);
 	}
-	
+
 	@GetMapping(value = "/{id}")
-	public ImovelDTO findById(@PathVariable Long id){
+	public ImovelDTO findById(@PathVariable Long id) {
 		return service.findById(id);
 	}
-	
-	
-	 @PostMapping 
-	 public ImovelDTO createImovelDTO(@RequestBody ImovelDTO imovelDTO){
-	 	return service.save(imovelDTO);
-	 }
-	 
-	 @DeleteMapping ("/{id}")
-	 public void  deleteById(@PathVariable ("id") Long id){
-		 service.deleteById(id);
-	 }
-	
+
+	@PostMapping
+	public ImovelDTO createImovelDTO(@Valid @RequestBody ImovelDTO imovelDTO) {
+		return service.save(imovelDTO);
+	}
+
+	@DeleteMapping("/{id}")
+	public void deleteById(@PathVariable("id") Long id) {
+		service.deleteById(id);
+	}
+
+	/*@PutMapping(value = "/{id}")
+		ImovelDTO imovelDTO = service.atualizaImovel(dto);
+		return imovelDTO;
+	}*/
+
 }

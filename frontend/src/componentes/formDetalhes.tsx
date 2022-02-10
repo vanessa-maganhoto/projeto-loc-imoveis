@@ -2,9 +2,8 @@ import * as React from 'react'
 import { Link, useNavigate } from 'react-router-dom';
 import './form.css'
 import { Imovel } from '../types/imovel'
-import axios, { AxiosRequestConfig } from 'axios';
+import axios from 'axios';
 import { BASE_URL } from '../utils/requests';
-import Cards from './cards';
 import { useParams } from 'react-router-dom';
 
 
@@ -28,33 +27,7 @@ export default function FormDetalhes() {
         event.preventDefault();
 
 
-        /* const config: AxiosRequestConfig = {
-            baseURL: BASE_URL,
-            method: 'GET',
-            url: '/imovel',
-            data: {
-                title: titulo,
-                image: imagem,
-                categoria: categoria,
-                descricao: descricao,
-
-                endereco: {
-                    cep: cep,
-                    logradouro: logradouro,
-                    numero: numero,
-                    bairro: bairro,
-                    complemento: complemento,
-                    cidade: cidade,
-                    estado: estado
-                }
-            }
-        } 
-
-        axios(config).then(response => {
-            console.log(response.data)
-            navigate("/")
-        })*/
-
+        
     }
 
     if (!imovel) {
@@ -85,9 +58,11 @@ export default function FormDetalhes() {
                         <p>{descricao}</p>
                     </div>
 
-                    <div className="loc-form-btn-container">
-                        <button type="submit" className=" btn loc-btn">Alterar dados</button>
-                    </div>
+                    <Link to={`/atualizar/${imovel.id}`} style={{ textDecoration: "none" }}>
+                        <div className="loc-form-btn-container">
+                            <button type="submit" className=" btn loc-btn">Alterar dados</button>
+                        </div>
+                    </Link>
                 </form >
 
                 <button onClick={excluirImovel} className="btn  loc-btn mt-3">Excluir imóvel</button>
