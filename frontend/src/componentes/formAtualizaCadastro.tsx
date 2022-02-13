@@ -24,7 +24,7 @@ export default function FormAtualizaCadastro() {
             })
     }, [id])
 
-    
+
 
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault()
@@ -44,7 +44,7 @@ export default function FormAtualizaCadastro() {
         const config: AxiosRequestConfig = {
             baseURL: BASE_URL,
             method: 'PUT',
-            url: '/imovel',
+            url: `/imovel/${imovel?.id}`,
             data: {
                 title: titulo,
                 image: imagem,
@@ -95,9 +95,13 @@ export default function FormAtualizaCadastro() {
 
             })
             .catch(e => {
-                console.error("Nao foi possivel buscar o cep", e )
+                console.error("Nao foi possivel buscar o cep", e)
                 return true;
             })
+    }
+
+    if (!imovel) {
+        return null
     }
 
     return (
@@ -107,22 +111,24 @@ export default function FormAtualizaCadastro() {
                 <form className="loc-form" onSubmit={handleSubmit}>
                     <div className="form-group loc-form-group">
                         <label htmlFor="titulo" >Título</label>
-                        <input className="form-control" type="text" id="titulo" value={imovel?.title} required/>
+                        <input className="form-control" type="text" id="titulo" defaultValue={imovel?.title} required />
                         <label htmlFor='cep'>CEP</label>
-                        <input type="text" id="cep" className="form-control" onBlur={checkCEP} value={imovel?.endereco.cep} required/>
+                        <input type="text" id="cep" className="form-control" onBlur={checkCEP} defaultValue={imovel?.endereco.cep} required />
                         <label htmlFor='logradouro'>Logradouro</label>
-                        <input className="form-control" type="text" id='logradouro' value={imovel?.endereco.logradouro} required />
+                        <input className="form-control" type="text" id='logradouro' defaultValue={imovel?.endereco.logradouro} required />
                         <label htmlFor='numero'>Número</label>
-                        <input className="form-control" type="text" id="numero" value={imovel?.endereco.numero} required/>
+                        <input className="form-control" type="text" id="numero" defaultValue={imovel?.endereco.numero} required />
                         <label htmlFor="bairro">Bairro</label>
-                        <input className="form-control" type="text" id="bairro" value={imovel?.endereco.bairro} required/>
+                        <input className="form-control" type="text" id="bairro" defaultValue={imovel?.endereco.bairro} required />
                         <label htmlFor='complemento'>Complemento</label>
-                        <input className="form-control" type="text" id="complemento" value={imovel?.endereco.complemento} />
+                        <input className="form-control" type="text" id="complemento" defaultValue={imovel?.endereco.complemento} />
                         <label htmlFor='cidade'>Cidade</label>
-                        <input className="form-control" type="text" id="cidade" value={imovel?.endereco.cidade} required/>
+                        <input className="form-control" type="text" id="cidade" defaultValue={imovel?.endereco.cidade} required />
                         <label>Estado</label>
-                        <select className="form-control " id="estado" value={imovel?.endereco.estado} required>
-                            <option value="" disabled selected>Selecione o estado</option>
+                        <select className="form-control " id="estado" required 
+                        value={imovel?.endereco?.estado} 
+                        onChange={(e)=> setImovel({...imovel, endereco: {...imovel.endereco, estado: e.target.value}})} >
+                            <option value="" disabled >Selecione o estado</option>
                             <option value="AC">AC</option>
                             <option value="AL">AL</option>
                             <option value="AP">AP</option>
@@ -152,16 +158,18 @@ export default function FormAtualizaCadastro() {
                             <option value="TO">TO</option>
                         </select>
                         <label htmlFor='categoria'>Categoria</label>
-                        <select className="form-control "  id='categoria' value={imovel?.categoria} required>
-                            <option value="" disabled selected>Escolha a categoria</option>
+                        <select className="form-control " id='categoria' required 
+                        value={imovel?.categoria} onChange={ (e) => setImovel({...imovel, categoria: e.target.value})    } >
+                            <option value="" disabled >Escolha a categoria</option>
                             <option value="comercial">Comercial</option>
                             <option value="residencial">Residencial</option>
                             <option value="temporada">Temporada</option>
                         </select>
                         <label htmlFor='descricao'>Descrição do Imóvel</label>
-                        <textarea className="form-control" id="descricao" value={imovel?.descricao} required></textarea>
+                        <textarea className="form-control" id="descricao" defaultValue={imovel?.descricao} required></textarea>
                         <label htmlFor="imagem">Imagem</label>
-                        <input className="form-control" type="text" id="imagem" value={imovel?.image} required/>
+                        <input className="form-control" type="text" id="imagem" defaultValue={imovel?.image} required />
+
                     </div>
                     <div className="loc-form-btn-container">
                         <button type="submit" className=" btn loc-btn">Salvar</button>
