@@ -12,8 +12,7 @@ export default function FormDetalhes() {
     const params = useParams()
     const id = params.imovelId
 
-    const navigate = useNavigate();
-
+    
     const [imovel, setImovel] = React.useState<Imovel>()
 
     React.useEffect(() => {
