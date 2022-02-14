@@ -13,7 +13,7 @@ export default function FormCadastro() {
     
     const navigate = useNavigate()
 
-    const [imovel, setImovel] = useState('')
+    const [,setImovel] = useState('')
 
     React.useEffect(() => {
         axios.post(`${BASE_URL}/imovel`)
