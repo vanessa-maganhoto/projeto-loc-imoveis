@@ -28,7 +28,7 @@ export default function Listing() {
 
     React.useEffect(() => {
 
-        axios.get(`${BASE_URL}/imovel?size=12&page=${pageNumber}`)
+        axios.get(`${BASE_URL}/imovel?size=12&page=${pageNumber}&sort=id`)
             .then(response => {
                 const data = response.data as ImovelPage
                 setPage(data)
